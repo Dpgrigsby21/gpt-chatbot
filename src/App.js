@@ -6,7 +6,7 @@ function App() {
   const [messages, setMessages] = useState([]);
   const [input, setInput] = useState('');
 
-  const apiKey = 'YOUR_OPENAI_API_KEY'; // ← Replace with your key for testing
+  const apiKey = process.env.REACT_APP_OPENAI_API_KEY;
 
   const sendMessage = async () => {
     if (!input.trim()) return;
